@@ -1,0 +1,1 @@
+import { productsController } from "./products/products-controller.js";
