@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crea tu anuncio</title>
+    <link rel="stylesheet" href="./css/create-product.css">
+</head>
+<body>
+    <!-- Formulario -->
+    <form>
+        <h2>Publicar un nuevo anuncio</h2>
+
+        <!-- Subir imagen -->
+        <div>
+            <label for="image">Subir imagen:</label>
+            <input type="file" id="image" name="image" accept="image/*" multiple>
+        </div>
+        
+        <!-- Precio -->
+        <div>
+            <label for="price">Precio (€):</label>
+            <input type="number" id="price" name="price" placeholder="Ej: 59.99" min="0" step="0.01" required>
+        </div>
+
+        <!-- Nombre del producto -->
+        <div>
+            <label for="name">Nombre del producto:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <!-- Descripción -->
+        <div>
+            <label for="description">Descripción:</label>
+            <textarea id="description" name="description" placeholder="Describe tu producto (máximo 300 caracteres)" 
+                rows="4" maxlength="300" required></textarea>
+        </div>
+
+        <!-- Compra o Venta -->
+        <fieldset>
+            <legend>¿Es una compra o una venta?</legend>
+            <div>
+                <input type="radio" id="purchase" name="purchaseorsale" value="PURCHASE" required checked>
+                <label for="purchase">Compra</label>
+            </div>
+            <div>
+                <input type="radio" id="sale" name="purchaseorsale" value="SALE" required>
+                <label for="sale">Venta</label>
+            </div>
+        </fieldset>
+
+        <!-- Botón de envío -->
+        <button type="submit">Crear anuncio</button>
+    </form>
+    <script type="module" src="./create-product.js"></script>
+</body>
+</html>
