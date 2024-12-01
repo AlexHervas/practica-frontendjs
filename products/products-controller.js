@@ -23,10 +23,10 @@ function fireEvent(message, type, element) {
 }
 
 export async function productsController(productsContainer) {
-    const spinner = document.querySelector('.spinner')
+    //const spinner = document.querySelector('.spinner')
     productsContainer.innerHTML = "";
 
-    spinner.classList.toggle('hidden');
+    //spinner.classList.toggle('hidden');
     try {
         const products = await getProducts();
         fireEvent("Productos cargados correctamente", "success", productsContainer);
@@ -34,6 +34,6 @@ export async function productsController(productsContainer) {
     } catch (error) {
         fireEvent(error.message, "error", productsContainer);
     } finally {
-        spinner.classList.toggle('hidden');
+       // spinner.classList.toggle('hidden');
     }
 }

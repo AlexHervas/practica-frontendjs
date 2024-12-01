@@ -4,7 +4,7 @@ export const buildProduct = (product) => {
     const createdAt = new Date(product.updatedAt)
     newProduct.innerHTML = `
       <div>
-        <span>usuario: ${product.user.username} - ${createdAt.toLocaleDateString()}</span>
+        <span>usuario: ${product.userId} - ${createdAt.toLocaleDateString()}</span>
         <p>${product.image}</p>
         <p>${product.price}</p>
         <p>${product.name}</p>

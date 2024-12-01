@@ -3,6 +3,7 @@ import { isUserLoggedIn } from "./utils/auth.js"
 
 if (!isUserLoggedIn()) {
   window.location.href = "/"
+  alert("Debes iniciar sesión para crear un anuncio.")
 }
 
 document.addEventListener("DOMContentLoaded", () => {
