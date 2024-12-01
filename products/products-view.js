@@ -6,7 +6,7 @@ export const buildProduct = (product) => {
       <div>
         <span>usuario: ${product.userId} - ${createdAt.toLocaleDateString()}</span>
         <p>${product.image}</p>
-        <p>${product.price}</p>
+        <p>${product.price} €</p>
         <p>${product.name}</p>
         <p>${product.description}</p>
         <p>${product.type}</p>

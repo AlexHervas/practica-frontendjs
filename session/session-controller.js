@@ -8,6 +8,7 @@ export function sessionController(sessionContainer) {
     const closeSessionButton = sessionContainer.querySelector("button")
     closeSessionButton.addEventListener("click", () => {
       localStorage.removeItem("jwt")
+      alert("Has cerrado sesión.")
       sessionController(sessionContainer)
     })
   } else {
