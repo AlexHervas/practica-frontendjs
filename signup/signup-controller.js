@@ -27,8 +27,9 @@ export function signupController(form) {
       errors.push('las passwords no sin iguales')
     }
 
-    for (const error of errors) {
-      // mostrar notificaciones
+    if (errors.length > 0) {
+      alert(errors.join("\n"))
+      return
     }
 
     if (errors.length === 0) {

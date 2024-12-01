@@ -33,6 +33,7 @@ async function handleLoginUser(userEmail, password) {
     window.location.href = "/"
 
   } catch (error) {
+    alert(error.message)
     throw new Error(error.message)
   }
 }

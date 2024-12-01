@@ -10,6 +10,7 @@ export async function getProducts() {
       return products;
   
     } catch (error) {
+      alert(error.message)
       throw new Error(error.message)
     }
 }
